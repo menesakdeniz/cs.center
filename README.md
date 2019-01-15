@@ -26,3 +26,21 @@ $api->post = [
 ];
 $veri = $api->get();
 ```
+
+```php
+require("CsCenterClass.php");
+$api = new CsCenter("Api KEY","AdminSales","URUN ID",[
+'steamid' => 'steamid',
+'immunity' => '50',
+'flags' => 'abcfghijkopqrs',
+'aciklama' => 'Cs.Center Api',
+'tag' => 'Admin',
+'tagkiskacstart' => '[',
+'tagkiskacend' => ']',
+'textcolor' => '{09}',
+'namecolor' => '{06}',
+'customerapi' => '0',
+'tagcolor' => '{0B}'
+]);
+$veri = $api->get();
+```
