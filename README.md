@@ -8,7 +8,7 @@ Nasıl Kullanılır?
 
 ### Example
 
-PHP:
+```php
 			require("CsCenterClass.php");
 			$api = new CsCenter;
 			$api->api_key = "Api KEY";
@@ -28,3 +28,4 @@ PHP:
 			   'tagcolor' => '{0B}'
 			 ];
 			$veri = $api->get();
+```
