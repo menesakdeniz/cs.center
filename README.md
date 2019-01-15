@@ -1,13 +1,10 @@
 Cs.Center Api
 ===========
 
-Açıklama
+cs.center api örnek kullanımı
 
 Nasıl Kullanılır?
 ----------
-
-### Example
-
 ```php
 require("CsCenterClass.php");
 $api = new CsCenter;
