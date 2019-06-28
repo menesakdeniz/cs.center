@@ -10,7 +10,9 @@ class CsCenter{
     $this->servis = $servis;
     $this->post = $post;
   }
-
+  public function setpost($post){
+	$this->post = $post;
+  }
   private function curl(){
       if($this->kontrol()){
       $ch = curl_init();
@@ -28,15 +30,15 @@ class CsCenter{
 
   private function kontrol(){
     if(empty($this->api_key)){
-      $this->bilgi = ['msg' => 'LÜtfen APi anahtarınızı boş bırakmayınız.','success' => false];
+      $this->bilgi = ['msg' => 'Lütfen APi anahtarınızı boş bırakmayınız.','success' => false];
       return false;
     }
     if(empty($this->urun_id)){
-      $this->bilgi = ['msg' => 'LÜtfen ürün id\'nizi boş bırakmayınız.','success' => false];
+      $this->bilgi = ['msg' => 'Lütfen ürün id\'nizi boş bırakmayınız.','success' => false];
       return false;
     }
     if(empty($this->servis)){
-      $this->bilgi = ['msg' => 'LÜtfen servis ismini boş bırakmayınız.','success' => false];
+      $this->bilgi = ['msg' => 'Lütfen servis ismini boş bırakmayınız.','success' => false];
       return false;
     }
     return true;
@@ -44,11 +46,10 @@ class CsCenter{
 
   public function get(){
     $this->curl();
-    return !is_array($this->bilgi) ? json_decode($this->bilgi) : $this->bilgi;
+    return !is_array($this->bilgi) ? json_decode($this->bilgi,true) : $this->bilgi;
   }
 
 }
 
 
 ?>
-
